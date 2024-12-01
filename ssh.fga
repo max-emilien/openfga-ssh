@@ -1,0 +1,16 @@
+model
+  schema 1.1
+
+type key
+
+type user
+  relations
+    define key: [key]
+
+type group
+  relations
+    define member: [user, group#member]
+
+type environment
+  relations
+    define can_connect: [group#member, user]

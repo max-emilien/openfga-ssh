@@ -1,0 +1,29 @@
+# Groups
+- user: group:ops
+  relation: can_connect
+  object: 'environment:prod'
+- user: group:ops
+  relation: can_connect
+  object: 'environment:dev1'
+- user: group:ops
+  relation: can_connect
+  object: 'environment:dev2'
+
+- user: group:dev_team_1
+  relation: can_connect
+  object: 'environment:dev1'
+
+- user: group:dev_team_2
+  relation: can_connect
+  object: 'environment:dev2'
+
+# Users
+- user: user:max-emilien
+  relation: member
+  object: group:ops
+# - user: user:dev1
+#   relation: member
+#   object: group:dev_team_1
+# - user: user:dev2
+#   relation: member
+#   object: group:dev_team_2
